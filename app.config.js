@@ -46,9 +46,7 @@ export default {
       },
     },
     owner: "chinmaya077",
-    runtimeVersion: {
-      policy: "appVersion",
-    },
+   runtimeVersion: "1.0.1",
     updates: {
       url: "https://u.expo.dev/720788aa-e36e-4f99-9667-ee0f218b674e",
     },
