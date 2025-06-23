@@ -21,7 +21,13 @@ jobs:
       - name: Install EAS CLI
         run: npm install -g eas-cli
 
-      - name: Run EAS Build
-        run: eas build --platform android --non-interactive --profile production
+      - name: Build APK (preview profile)
+        run: eas build --platform android --non-interactive --profile preview
         env:
           EXPO_TOKEN: ${{ secrets.EAS_ACCESS_TOKEN }}
+
+      # If you also want the production AAB in the same run, uncomment:
+      #- name: Build AAB (production profile)
+      #  run: eas build --platform android --non-interactive --profile production
+      #  env:
+      #    EXPO_TOKEN: ${{ secrets.EAS_ACCESS_TOKEN }}
